@@ -5,6 +5,17 @@ public class Main {
 
     }
 
+    public static int [] letterDelete (String [] strings) {
+        for (int i = 0; i < strings.length; i++) {
+            strings[i] = strings[i].replaceAll("[a-zA-z]", "");
+        }
+        int[] stringsToInt = new int[strings.length];
+        for (int i = 0; i < stringsToInt.length; i++) {
+            stringsToInt[i] = Integer.parseInt(strings[i]);
+        }
+        return stringsToInt;
+    }
+
     public static boolean comparisonArrays(int[] array, int[] array1) {
         System.out.println(Arrays.toString(array) + "\n" + Arrays.toString(array1));
         return Arrays.equals(array, array1);
